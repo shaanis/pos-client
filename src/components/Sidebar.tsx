@@ -3,8 +3,6 @@ import {
     Utensils,
     CreditCard,
     CalendarDays,
-    MessageSquareText,
-    HelpCircle,
     Menu,
     X,
   } from "lucide-react";

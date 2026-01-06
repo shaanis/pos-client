@@ -1,5 +1,4 @@
-import React from "react";
-import { Search, Mic, SlidersHorizontal } from "lucide-react";
+import { Search, Mic } from "lucide-react";
 
 const Header = () => {
   return (

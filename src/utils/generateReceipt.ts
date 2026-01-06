@@ -2,7 +2,7 @@
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
-const THERMAL_WIDTH_PX = 380; // matches your receipt div width
+// const THERMAL_WIDTH_PX = 380; // matches your receipt div width
 const THERMAL_WIDTH_PT = 226; // 80mm ≈ 226pt (use 164pt for 58mm)
 
 export const generateReceiptPDF = async (receiptElement: HTMLElement) => {

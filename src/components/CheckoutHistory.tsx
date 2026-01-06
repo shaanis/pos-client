@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { CreditCard, Loader2, ShoppingBag, IndianRupee, Search, ChevronRight, Calendar, Package, Filter } from "lucide-react";
+import  { useState, useEffect } from "react";
+import { CreditCard, Search, ChevronRight, Calendar } from "lucide-react";
 import { getAllCheckoutsApi, type Checkout, type PaginatedResponse } from "../services/allApi";
 
 const statusStyles: Record<string, { bg: string; text: string; icon: string }> = {
@@ -26,7 +26,7 @@ const CheckoutHistoryPage = () => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [statusFilter, setStatusFilter] = useState<string>("All");
+const [statusFilter] = useState("All");
 
   const fetchCheckouts = async (pageNum: number) => {
     setLoading(true);
@@ -53,8 +53,8 @@ const CheckoutHistoryPage = () => {
        (o.status || "").toLowerCase().includes(search.toLowerCase()))
   );
 
-  const totalRevenue = checkouts.reduce((sum, o) => sum + o.total, 0);
-  const averageOrderValue = checkouts.length > 0 ? totalRevenue / checkouts.length : 0;
+//   const totalRevenue = checkouts.reduce((sum, o) => sum + o.total, 0);
+//   const averageOrderValue = checkouts.length > 0 ? totalRevenue / checkouts.length : 0;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-slate-50 p-4 md:p-8 space-y-8">

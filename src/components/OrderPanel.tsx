@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { 
-  Plus, Minus, Printer, ShoppingBag, 
+  Plus, Minus, ShoppingBag, 
   CreditCard, ReceiptText, X, Loader2, Check 
 } from "lucide-react";
 import { getCart, saveCart } from "../utils/cartSession";
@@ -73,6 +73,8 @@ const OrderPanel = () => {
     if (!element || items.length === 0) return;
 
     setIsPrinting(true);
+    console.log(isPrinting);
+    
     const container = element.parentElement;
     const originalStyle = container?.style.cssText || "";
 
